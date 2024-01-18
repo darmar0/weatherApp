@@ -54,7 +54,7 @@ const Search: React.FC<SearchProps> = ({
                   onClick={() => selectCity(city)}
                   className="suggestion"
                 >
-                  {city.name}
+                  {city.name}, {city.country}
                 </li>
               );
             })}
