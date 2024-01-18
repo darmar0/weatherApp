@@ -30,7 +30,7 @@ const Search: React.FC<SearchProps> = ({
       }
     }, 500);
     return () => clearTimeout(timer);
-  }, [search]);
+  }, [search, onSearch]);
   return (
     <>
       <div className="input-wrapper">
