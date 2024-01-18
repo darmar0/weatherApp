@@ -1,6 +1,6 @@
 import Search from "./components/search.component";
 import CurrentWeather from "./components/currentWeather.component";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { City, CurrentWeatherType } from "./types/types";
 import { getCities, getWeather } from "./api/weather.api";
 import "./App.scss";
@@ -9,11 +9,18 @@ function App() {
   const [cities, setCities] = useState<City[]>([]);
   const [currentWeather, setCurrentWeather] = useState<CurrentWeatherType>({});
   const [isLoading, setLoading] = useState(false);
-  const onSearch = async (term: string) => {
+  // const onSearch = async (term: string) => {
+  //   let res = await getCities(term);
+  //   setCities(res);
+  //   setLoading(false);
+  // };
+
+  const onSearch = useCallback(async (term: string) => {
     let res = await getCities(term);
     setCities(res);
     setLoading(false);
-  };
+  }, []);
+
   const onSelect = async (lat: string, lon: string) => {
     let res = await getWeather(lat, lon);
     setCurrentWeather(res);
