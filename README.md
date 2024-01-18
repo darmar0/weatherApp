@@ -21,4 +21,4 @@ You will also see any lint errors in the console.
 
 Here is a link to live demo presentation: 
 
-https://ibuy-ecomerce-app.netlify.app/
+https://weather-city-app-reactts.netlify.app
