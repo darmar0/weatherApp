@@ -4,7 +4,7 @@ const errorMsg = "Something went wrong, please try again.";
 export const getCities = async (searchTerm: string) => {
   const options = {
     method: "GET",
-    url: `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=1000000&namePrefix=${searchTerm}`,
+    url: `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=300000&namePrefix=${searchTerm}`,
     headers: {
       "X-RapidAPI-Key": "6b9eeb4ebfmsh687977cfc6850f8p186e0ajsnfac9ef4b4120",
       "X-RapidAPI-Host": "wft-geo-db.p.rapidapi.com",
